@@ -45,8 +45,7 @@
             #navbar.active {
                 display: flex;
             }
-        }
-
+        
         #videoThumbnailContainer {
             display: flex;
             justify-content: center;
@@ -66,7 +65,8 @@
             height: 100%;
             border: none;
             object-fit: cover; /* 保持比例並填滿容器 */
-        }
+        }}
+
         
     </style>
 </head>
@@ -87,7 +87,8 @@
         color: white;
         font-size: 10px;
         cursor: pointer;">Back</button><br><br>
-            <h1 id="videoTitle"></h1>
+            <h1 id="videoTitle"></h1><br>
+            <a id="videoLink" href="" target="_blank"><i class="fas fa-link"></i>&nbsp;Watch on YouTube</a><br>
         <main>
             <!--<img id="videoThumbnail" src="" alt="Video Thumbnail">-->
             <div id="videoThumbnailContainer"></div>
@@ -104,7 +105,7 @@
                 border-radius: 4px;
                 color: white;
                 font-size: 13px;
-                cursor: pointer;">Update Watch Record</button>
+                cursor: pointer;">Update Watch Record</button>&nbsp;
                 <button id="removeFromPlaylistButton"  style="padding: 7px 15px;
                 background-color: #f3a41cb4;
                 border: none;
@@ -115,7 +116,6 @@
                 </div>
                 
             </div>
-            <a id="videoLink" href="" target="_blank">Watch on YouTube</a>
         </main>
         <br>
         <footer>
