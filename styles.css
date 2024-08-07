@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav button {
+    margin: 0 5px;
+    padding: 10px 20px;
+}
+
+#searchResults, #playlist {
+    margin-top: 20px;
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.video-item img {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.videoThumbnail {
+    width: 300px; /* 設定寬度為 300 像素 */
+    height: auto; /* 高度自動調整以保持比例 */
+}
+
+
+.video-item .removeFromPlaylistButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0); /* 或者你想要的顏色 */
+    font-size: 1em;
+    /* 可以增加其他樣式 */
+}
+
+.video-item .removeFromPlaylistButton i {
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background: linear-gradient(to right, #171b4f, #0c0c56);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(220, 228, 247, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    display: inline; /* 確保 h1 和 small 在同一行 */
+    line-height: 1; /* 調整行高以便更好地對齊 */
+}
+
+h1 small {
+    font-size: 12px; /* 縮小字體大小 */
+    color: #095378; /* 改變顏色使其不那麼顯眼 */
+    margin-left: 5px; /* 添加一些左邊距以保持間距 */
+    vertical-align: baseline; /* 對齊到 h1 的底部 */
+}
+
+header nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #333;
+}
+
+header nav button:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 600px) {
+            
+
+    h1 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 7px 15px;
+    background-color: #f3a41cb4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d2910e;
+}
+
+a#videoLink {
+    display: block;
+    margin-top: 20px;
+    color: #08375f;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a#videoLink:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 12px;
+    color: #090909;
+}
+
+
+
+
+
+
+
+
+
+.title-container {
+    display: block;
+    cursor: pointer;
+}
+
+.title-container .summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-container .details {
+    display: none;
+}
+
+.title-container.active .details {
+    display: block;
+}
+
+.title-container.active .summary {
+    display: none;
+}

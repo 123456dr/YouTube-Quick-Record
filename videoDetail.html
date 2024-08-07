@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Detail</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        header h1 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 導航欄樣式 */
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 在手機上顯示展開符號 */
+        #menuToggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            #menuToggle {
+                display: block;
+            }
+
+            #navbar {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* 調整為你的 header 高度 */
+                right: 0;
+                background: #fff; /* 背景顏色 */
+                width: 100%;
+                box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+            }
+
+            #navbar.active {
+                display: flex;
+            }
+        }
+
+        #videoThumbnailContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 的比例 */
+            position: relative;
+            background: #000; /* 背景顏色 */
+            overflow: hidden; /* 隱藏超出容器的部分 */
+        }
+
+        #videoThumbnailContainer iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover; /* 保持比例並填滿容器 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Add video</h1>
+            <div id="menuToggle"><i class="fas fa-bars"></i></div>
+            <nav id="navbar">
+                <button id="homeButton">Home</button>
+                <button id="playlistButton">My Playlist</button>
+            </nav>
+        </header>
+        <button id="backButton" style="padding: 5px 10px;
+        background-color: #f3a41cb4;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 10px;
+        cursor: pointer;">Back</button><br><br>
+        <h1 id="videoTitle"></h1>
+        <a id="videoLink" href="" target="_blank">Watch on YouTube</a>
+        <main>
+            <div id="videoThumbnailContainer"></div>
+            <div>
+                <!--<p id="videoDuration">Duration: Loading...</p>-->
+                <div style="display: flex; align-items: center;">
+                    <label style="margin-right: 10px;">Hours: <input type="number" id="hours" min="0"></label>
+                    <label style="margin-right: 10px;">Minutes: <input type="number" id="minutes" min="0" max="59"></label>
+                    <label style="margin-right: 10px;">Seconds: <input type="number" id="seconds" min="0" max="59"></label>
+                </div><br><br>
+                <button id="addToPlaylistButton"  style="padding: 7px 15px;
+                background-color: #f3a41cb4;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-size: 13px;
+                cursor: pointer;">Add to Playlist</button>
+            </div>
+            <!--<button id="updurl">立刻設定秒數</button>-->
+        </main>
+        <br><br><br>
+        <footer>
+            Created by RC 鋼筋混泥土
+        </footer>
+    </div>
+    <script src="videoDetail.js"></script>
+    <script>
+        // JavaScript for toggling the menu on mobile
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
