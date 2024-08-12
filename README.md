@@ -13,8 +13,9 @@ Since the original idea was to create a functional website with one-click projec
 
 
 ### note
-//保全:avoid those who load in this page without entering passwd (who via type the url in search) 
-'''
+保全:avoid those who load in this page without entering passwd (who via type the url in search) 
+
+```
     if (!sessionStorage.getItem('authorized')) {
         window.location.href = 'index.html';
     }
