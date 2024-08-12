@@ -49,7 +49,31 @@
             object-fit: cover; /* 保持比例並填滿容器 */
         }
 
+        
+        .zoom {
+            width: 500px;
+            left: 10px;
+            right: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .zoom:hover {
+            transform: scale(1.2);
+        }
+
+
         @media (max-width: 600px) {
+
+                
+            .zoom {
+                width: 200px;
+                transition: transform 0.5s ease;
+            }
+
+            .zoom:hover {
+                transform: scale(1.2);
+            }
+
             #menuToggle {
                 display: block;
             }
@@ -112,43 +136,7 @@
         }
         }
 
-
-
-
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1; 
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto; 
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.4); 
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 300px;
-            border-radius: 10px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
+        
 
         #birthButton {
             transition: transform 0.3s ease;
@@ -159,6 +147,7 @@
             transform: scale(1.1); /* 鼠標懸停時縮放 */
         }
 
+        
 
         #how {
             transition: transform 0.3s ease;
@@ -168,87 +157,32 @@
         #how:hover {
             transform: scale(1.1); /* 鼠標懸停時縮放 */
         }
-
-        
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>How To Use<small>  by RC鋼筋混泥土</small></h1>
+            <h1><i class="fas fa-gift icon"></i></i><small>  by RC鋼筋混泥土</small></h1>
             <div id="menuToggle"><i class="fas fa-bars"></i></div>
             <nav id="navbar">
                 <button id="birthButton"><i class="fas fa-birthday-cake"></i></h</button>
-                <!-- <button id="clearDataButton">清除資料</button> -->
                 <button id="how"><i class="fas fa-question"></i></button>
                 <button id="homeButton">Home</button>
                 <button id="playlistButton">My Playlist</button>
             </nav>
         </header>
-        <h1>About  "YouTube-Quick-Record"</h1>
-        <h3 style="color: rgb(20, 37, 223);">A website that can quickly set up video recording points</h3>
-        <h3 style="color: rgb(75, 76, 94);">
-            Inspired by the fact that more and more people in today's society like to watch long-form YouTube storytelling series videos, 
-            but cannot watch more than 20 hours of videos in one go,
-            so it provides them with the opportunity to rely on this platform to record. <br>
-            <br>
-        </h3>
-        <h3 style="color: rgb(20, 37, 223);"> Why not use the playlist function provided by YouTube?</h3>
-            <h3 style="color: rgb(75, 76, 94);">
-            Since the original idea was to create a functional website with one-click projection to smart TVs,
-             due to considerations of time and ability,<br>
-             I have not yet conducted in-depth research (I am a student who recently took the 學測)</h3>
-
-        <hr><br>
-        <h1>Instructions</h1>
-        <br><br>
-        <div id="iframeContainer">
-            <iframe src="https://www.youtube.com/embed/KN0eQg_CiUI?si=JAMuIWwiCJe4wvBU" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
-        </div>
-        
-        <hr><br>
-        <h3 style="color:#d70000 ;font-size: 15px;">!狀況記錄:使用連結搜尋=>錯誤</h3>
-        <h3 style="color:#d70000 ;font-size: 15px;">!狀況記錄:暫無投影快捷功能</h3>
-
-
-        <div id="birthdayModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>請輸入你的生日 (MM-DD):</p>
-                <br><input type="number"  id="monthInput" min="1" max="12" placeholder="MM">
-                <input type="number"  id="dayInput" min="1" max="31" placeholder="DD">
-                <button id="submitBirthday">送出</button>
-                <h6 style="color: rgb(6, 3, 187);">保證不主動以任何方式洩漏</h6>
-            </div>
-        </div>
-
-        <div id="notBirthdayModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>今天不是你生日，期待你生日的到來</p>
-                <h6 style="color: rgb(6, 3, 187);">網路詐騙猖獗，妥善保護個資，切勿輕信他人 <i class="fas fa-laugh-squint"></i></h6>
-                <input type="text"  id="RCInput" placeholder="管理員專用...">
-                <button id="submitRC">Admin</button>
-            </div>
-        </div>
-
-
-
-
-
+        <h1>祝你生日快樂! </h1><br><br>
+        <img src="\hbd.png" alt="Zoom Effect" class="zoom">
+        <h6 style="color: rgb(6, 3, 187);">網路詐騙猖獗，妥善保護個資，切勿輕信他人  <i class="fas fa-laugh-squint"></i></h6>
+    
 
     <footer>
         Created by RC 鋼筋混泥土
     </footer>
     </div>
-    <script src="how.js"></script>
+    <script src="bir.js"></script>
     <script>
-        // JavaScript for toggling the menu on mobile
+        
         document.getElementById('menuToggle').addEventListener('click', () => {
             document.getElementById('navbar').classList.toggle('active');
         });
